@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GeoMatch · Humanoid Motion Retargeting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060608;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.10);--txt:#ecebe7;--mute:#8d8c88}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;
+ background:linear-gradient(#060608cc,#06060800);backdrop-filter:blur(6px)}
+nav .logo{font-weight:600;letter-spacing:.02em}nav .links{display:flex;gap:28px;font-size:14px;color:var(--mute)}
+nav .links a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;border:1px solid var(--line);
+ background:var(--card);backdrop-filter:blur(10px);font-size:14px;transition:.25s}
+.btn:hover{background:rgba(255,255,255,.12)}.btn.solid{background:#ecebe7;color:#111;border-color:#ecebe7}
+.hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,#060608 85%),
+ linear-gradient(#06060800 60%,#060608)}
+.hero .inner{position:relative;z-index:2;max-width:920px;padding:0 24px}
+.pill{display:inline-flex;gap:10px;align-items:center;padding:6px 14px 6px 6px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--mute);background:var(--card)}
+.pill b{background:#ecebe7;color:#111;border-radius:999px;padding:2px 10px;font-weight:500}
+h1{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:clamp(48px,8vw,104px);line-height:.98;margin:26px 0 20px;letter-spacing:-.01em}
+.sub{color:#b9b8b3;font-size:17px;line-height:1.6;max-width:640px;margin:0 auto 32px;font-weight:300}
+.cta{display:flex;gap:12px;justify-content:center}
+.stats{display:flex;gap:16px;justify-content:center;margin-top:48px}
+.stat{padding:18px 26px;border:1px solid var(--line);border-radius:18px;background:var(--card);backdrop-filter:blur(14px);text-align:left;min-width:170px}
+.stat .n{font-family:"Instrument Serif",serif;font-style:italic;font-size:38px}.stat .l{font-size:12px;color:var(--mute);margin-top:2px}
+section{max-width:1240px;margin:0 auto;padding:110px 40px 0}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(38px,5vw,64px);margin:10px 0 14px;line-height:1}
+h2 i{color:#b9b8b3}.lead{color:var(--mute);max-width:620px;line-height:1.6;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(480px,1fr));gap:22px}
+.card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0c0c0f;transition:.35s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22);box-shadow:0 30px 80px -30px rgba(160,170,255,.18)}
+.card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+.card .meta{display:flex;justify-content:space-between;align-items:center;padding:16px 20px}
+.card .t{font-weight:500}.card .s{font-size:13px;color:var(--mute)}
+.tag{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
+footer{margin:140px 0 0;padding:40px;border-top:1px solid var(--line);text-align:center;color:var(--mute);font-size:13px}
+@media(max-width:640px){nav .links{display:none}.grid{grid-template-columns:1fr}.stats{flex-direction:column;align-items:center}section{padding:80px 20px 0}}
+</style>
+</head>
+<body>
+<nav><div class="logo">GeoMatch</div>
+<div class="links"><a href="#fast">Fast Dance</a><a href="#grace">Graceful</a><a href="#run">Running</a><a href="#climb">Climbing</a></div>
+<a class="btn" href="#fast">Watch</a></nav>
+
+<header class="hero">
+<video src="videos/hero_troupe044.mp4" autoplay muted loop playsinline></video>
+<div class="inner">
+<span class="pill"><b>New</b>9 humanoids · FineDance 044 ensemble</span>
+<h1>Human Motion,<br>Reborn in Steel</h1>
+<p class="sub">From breakdance to classical choreography, sprinting to parkour, every human performance is retargeted onto a humanoid robot, frame by frame.</p>
+<div class="cta"><a class="btn solid" href="#fast">Explore motions ↗</a><a class="btn" href="#climb">Parkour ▶</a></div>
+<div class="stats">
+<div class="stat"><div class="n">4</div><div class="l">Motion categories</div></div>
+<div class="stat"><div class="n">29</div><div class="l">Degrees of freedom</div></div>
+<div class="stat"><div class="n">30 fps</div><div class="l">Kinematic reference</div></div>
+</div></div></header>
+
+<section id="fast"><div class="eyebrow">01 · Fast Dance</div><h2>Rhythm <i>at full speed</i></h2>
+<p class="lead">High-energy breaking and pop choreography: rapid weight shifts, sharp arm hits and footwork.</p>
+<div class="grid">
+<div class="card"><video src="videos/fast_break.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Breaking</div><div class="s">AIST++ · gBR</div></div><span class="tag">12 s</span></div></div>
+<div class="card"><video src="videos/fast_pop.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Pop Dance</div><div class="s">PopDanceSet</div></div><span class="tag">12 s</span></div></div>
+</div></section>
+
+<section id="grace"><div class="eyebrow">02 · Graceful Dance</div><h2>Fluid <i>and expressive</i></h2>
+<p class="lead">Slow, flowing choreography that tests smooth whole-body coordination and balance.</p>
+<div class="grid">
+<div class="card"><video src="videos/grace_044.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">FineDance 044</div><div class="s">FineDance</div></div><span class="tag">15 s</span></div></div>
+<div class="card"><video src="videos/grace_109.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">FineDance 109</div><div class="s">FineDance</div></div><span class="tag">12 s</span></div></div>
+</div></section>
+
+<section id="run"><div class="eyebrow">03 · Running</div><h2>Built <i>to move</i></h2>
+<p class="lead">Dynamic locomotion with flight phases and long strides.</p>
+<div class="grid">
+<div class="card"><video src="videos/run_soma2.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Run</div><div class="s">AMASS · SOMA</div></div><span class="tag">18 s</span></div></div>
+<div class="card"><video src="videos/run_soma1.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Run</div><div class="s">AMASS · SOMA</div></div><span class="tag">11 s</span></div></div>
+</div></section>
+
+<section id="climb"><div class="eyebrow">04 · Climbing &amp; Parkour</div><h2>Beyond <i>flat ground</i></h2>
+<p class="lead">Stair climbing and parkour sequences with contact-rich, terrain-aware motion.</p>
+<div class="grid">
+<div class="card"><video src="videos/climb_stairs.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Double Stairs</div><div class="s">ETH terrain</div></div><span class="tag">20 s</span></div></div>
+<div class="card"><video src="videos/climb_parkour.mp4" autoplay muted loop playsinline></video><div class="meta"><div><div class="t">Parkour</div><div class="s">ETH terrain</div></div><span class="tag">20 s</span></div></div>
+</div></section>
+
+<footer>GeoMatch · Humanoid motion retargeting · Rendered with MuJoCo</footer>
+</body></html>
